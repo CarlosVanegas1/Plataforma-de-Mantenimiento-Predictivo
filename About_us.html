@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Predictive Maintenance, Casva, GCP, AWS, Firebase, Login" />
+    <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+    <link rel="stylesheet" href="styles/StyleAbout.css">
+    <title>CASVA - Nosotros</title>
+</head>
+<body>
+    <header>
+        <img src="Imagenes/Logo.png" class="logo" onclick="window.location.href='index.html'">
+        <nav class="navegation">
+            <a href="index.html">Inicio</a>
+            <a href="Information.html">Información</a>
+            <a href="Service.html">Servicios</a>
+            <a href="About_us.html">Nosotros</a>
+            
+            <button class="btn" onclick="window.location.href='Login.html'">Ingresar</button>
+        </nav>
+    </header>
+
+    <section class="section_container explore_container">
+        <div class="explore_header">
+            <h2 class="section_header">Innovación, Precisión, Compromiso y Sostenibilidad</h2>
+        </div>
+        <div class="explore_grid">
+            <div class="explore_card">
+                <span><i class="fa-solid fa-globe"></i></span>
+                <h4>Historia</h4>
+                <p>
+                    CASVA fue fundada con la visión de transformar el mantenimiento industrial.
+                    Nuestro equipo de ingenieros y expertos en datos se dedica a crear soluciones predictivas
+                    que anticipan fallos antes de que ocurran.
+                </p>
+            </div>
+            <div class="explore_card">
+                <span><i class="fa-solid fa-shield-halved"></i></span>
+                <h4>Misión</h4>
+                <p>
+                    Proporcionar herramientas avanzadas de mantenimiento predictivo que aumenten
+                    la eficiencia y seguridad en operaciones industriales.
+                </p>
+            </div>
+            <div class="explore_card">
+                <span><i class="fa-solid fa-lightbulb"></i></span>
+                <h4>Visión</h4>
+                <p>
+                    Ser líderes en el mercado latinoamericano en soluciones de mantenimiento
+                    predictivo, reconocidos por nuestra innovación y excelencia en el servicio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container team_container">
+        <h2 class="section_header">Nuestro Equipo</h2>
+        <div class="team_grid">
+            <div class="team_card">
+                <img src="Imagenes/Carlos.jpg" alt="Miembro del equipo 1">
+                <h4>Carlos Vanegas</h4>
+                <p>CEO & Fundador</p>
+            </div>
+            <div class="team_card">
+                <img src="Imagenes/Mujer.avif" alt="Miembro del equipo 2">
+                <h4>María López</h4>
+                <p>Ingeniera de Datos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container testimonials_container">
+        <h2 class="section_header">Testimonios de Clientes</h2>
+        <div class="testimonials_grid">
+            <div class="testimonial_card">
+                <p>"CASVA nos ha permitido ahorrar tiempo y reducir costos. Su equipo es increíblemente profesional."</p>
+                <h4>- Cliente A</h4>
+            </div>
+            <div class="testimonial_card">
+                <p>"Las soluciones predictivas de CASVA han transformado nuestro enfoque en el mantenimiento."</p>
+                <h4>- Cliente B</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 CASVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.navegation a').forEach(link => {
+            if (link.href.split('/').pop() === window.location.pathname.split('/').pop()) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

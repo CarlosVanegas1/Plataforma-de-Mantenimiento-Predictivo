@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Predictive Maintenance, Casva, GCP, AWS, Firebase, Login" />
+        <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+        <link rel="stylesheet" href="styles/StyleLogin.css">
+        <title>CASVA - Login</title>
+    </head>
+    <body>
+        <header>
+            <img src="Imagenes/Logo.png" class="logo" onclick="window.location.href='index.html'">
+        </header>
+        
+        <div class="fondo"> 
+            <span class="icon-close" onclick="window.location.href='index.html'"><i class="fa-solid fa-xmark"></i></span>
+            
+            <div class="container-form login">
+                <h2>Welcome</h2>
+                <form id="loginForm">
+                    <div class="container-input">
+                        <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                        <input type="email" id="txtEmail" required>
+                        <label for="txtEmail">Email</label>
+                    </div>
+
+                    <div class="container-input">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="txtPassword" required>
+                        <label for="txtPassword">Password</label>
+                    </div>
+
+                    <button type="button" id="btnLogin" class="btn">Login</button>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="firebase_login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Predictive Maintenance, Casva, GCP, AWS, Firebase, Login" />
+        <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+        <link rel="stylesheet" href="styles/StyleService.css">
+        <title>CASVA - Servicios</title>
+    </head>
+    <body>
+        <header>
+            <img src="Imagenes/Logo.png" class="logo" onclick="window.location.href='index.html'">
+
+            <nav class="navegation">
+                <a href="index.html">Inicio</a>
+                <a href="Information.html">Información</a>
+                <a href="Service.html" class="active">Servicios</a>
+                <a href="About_us.html">Nosotros</a>
+
+                <button class="btn" onclick="window.location.href='Login.html'">Ingresar</button>
+            </nav>
+        </header>
+
+        <!-- Sección principal -->
+        <section class="services-header">
+            <h1>Nuestros Servicios</h1>
+            <p>En CASVA, ofrecemos una gama completa de productos y servicios para optimizar el rendimiento y la eficiencia de tu maquinaria.</p>
+        </section>
+
+        <!-- Sección de servicios en formato de catálogo -->
+        <section class="services-container">
+            <div class="service">
+                <img src="Imagenes/Monitoreo_Predictivo.webp" alt="Monitoreo Predictivo">
+                <h2>Monitoreo Predictivo</h2>
+                <p>Utilizamos tecnología avanzada para monitorear el estado de tu maquinaria y predecir fallos antes de que ocurran.</p>
+            </div>
+
+            <div class="service">
+                <img src="Imagenes/Xperta_new_2.jpg" alt="Fresadora de bancada fija y mesa móvil Correa XPERTA">
+                <h2>Fresadora de bancada fija y mesa móvil Correa XPERTA</h2>
+                <p>La XPERTA representa un nuevo concepto de máquina de bancada fija y carnero lateral, adecuada tanto para desbaste como para acabado.</p>
+            </div>
+
+            <div class="service">
+                <img src="Imagenes/MAGNA_rgb.jpg" alt="Fresadoras de columna móvil Correa MAGNA">
+                <h2>Fresadoras de columna móvil Correa MAGNA</h2>
+                <p>Una gran capacidad de arranque de viruta manteniendo altos niveles de precisión.</p>
+            </div>
+
+            <div class="service">
+                <img src="Imagenes/FOX-nueva.jpg" alt="Fresadora de puente fijo y mesa móvil | FOX">
+                <h2>Fresadora de puente fijo y mesa móvil | FOX</h2>
+                <p>Innovadora máquina puente, que combina capacidad de desbaste con mecanizado de alto rendimiento.</p>
+            </div>
+
+            <div class="service">
+                <img src="Imagenes/FOX-MW_WEB_Blanca.jpg" alt="Fresadora gantry | FOX MW">
+                <h2>Fresadora gantry | FOX MW</h2>
+                <p>Fresadora gantry que combina capacidad de desbaste tradicional con la velocidad del mecanizado de alto rendimiento.</p>
+            </div>
+
+            <section class="service wid">
+            <div class="contact-form">
+                <h2>Solicita Más Información</h2>
+                <form action="contacto.php" method="post">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Correo" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            </section>
+            
+        </section>
+
+        <script>
+            document.querySelectorAll('.navegation a').forEach(link => {
+                if (link.href.split('/').pop() === window.location.pathname.split('/').pop()) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
+    </body>
+</html>

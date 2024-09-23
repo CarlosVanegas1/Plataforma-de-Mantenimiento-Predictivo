@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <meta name="keywords" content="Predictive Maintenance, Casva, GCP, AWS, Firebase, Login" />
+        <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+        <link rel="stylesheet" href="styles/StyleIndex.css">
+        <title>CASVA - Inicio</title>
+    </head>
+    <body>
+        <header>
+            <img src="Imagenes/Logo.png" class="logo" onclick="window.location.href='index.html'">
+
+            <nav class="navegation">
+                <a href="index.html">Inicio</a>
+                <a href="Information.html">Información</a>
+                <a href="Service.html">Servicios</a>
+                <a href="About_us.html">Nosotros</a>
+
+                <button class="btn" onclick="window.location.href='Login.html'">Ingresar</button>
+            </nav>
+        </header>
+         
+        <div class="section_container header_container">
+
+            <div class="header_content">
+                <span class="bf_bluer"></span>
+                <span class = "bg_bluer header_bluer"></span>
+                <h4>Anticipamos el futuro de tu maquinaria, asegurando su máximo rendimiento con soluciones</h4>
+                <h1><span>predictivas </span>avanzadas.</h1>
+                <p>En CASVA, revolucionamos la manera en que se realiza el mantenimiento
+                    industrial. Utilizamos inteligencia artificial y análisis de datos para predecir fallos y
+                    optimizar el rendimiento de tus equipos.</p>
+            </div>
+
+            <div class = "header_image">
+                <img src="Imagenes/Mant_Predictivo.jpg" alt="header">
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.navegation a').forEach(link => {
+                if (link.href.split('/').pop() === window.location.pathname.split('/').pop()) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
+    </body>
+</html>

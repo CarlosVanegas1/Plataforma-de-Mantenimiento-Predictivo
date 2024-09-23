@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASVA - Dashboard Administrador</title>
+    <link rel="stylesheet" href="styles/StyleAdminDashboard.css">
+    <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard Administrador</h1>
+        <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+    </header>
+
+    <div class="container">
+        <section id="manageUsers">
+            <h2>Gestionar Usuarios</h2>
+            <form id="createUserForm">
+                <input type="email" id="newUserEmail" placeholder="Email" required>
+                <input type="password" id="newUserPassword" placeholder="Contraseña" required>
+                <input type="text" id="newUserName" placeholder="Nombre" required>
+                <select id="newUserRole" required>
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <button type="submit" id="createUserBtn" class="btn">Crear Usuario</button>
+            </form>
+            <div id="usersList">
+                <!-- Lista de usuarios será cargada aquí -->
+            </div>
+        </section>
+
+        <section id="manageProducts">
+            <h2>Gestionar Productos</h2>
+            <form id="createProductForm">
+                <input type="text" id="newProductName" placeholder="Nombre del Producto" required>
+                <textarea id="newProductDescription" placeholder="Descripción" required></textarea>
+                <button type="submit" class="btn">Agregar Producto</button>
+            </form>
+            <div id="productsList">
+                <!-- Lista de productos será cargada aquí -->
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="admin_dashboard.js"></script>
+</body>
+</html>

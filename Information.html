@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <meta name="keywords" content="Predictive Maintenance, Casva, GCP, AWS, Firebase, Login" />
+        <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+        <link rel="stylesheet" href="styles/StyleInfo.css">
+        <title>CASVA - Informacion</title>
+    </head>
+    <body>
+        <header>
+            <img src="Imagenes/Logo.png" class="logo" onclick="window.location.href='index.html'">
+
+            <nav class="navegation">
+                <a href="index.html">Inicio</a>
+                <a href="Information.html">Información</a>
+                <a href="Service.html">Servicios</a>
+                <a href="About_us.html">Nosotros</a>
+
+                <button class="btn" onclick="window.location.href='Login.html'">Ingresar</button>
+            </nav>
+        </header>
+
+        <section class="section_container explore_container">
+            <h2 class="section-title">Preguntas Frecuentes sobre Mantenimiento Predictivo</h2>
+
+            <div class="faq-item">
+                <h3 class="faq-question">¿Qué es el mantenimiento predictivo?</h3>
+                <div class="faq-answer">
+                    <p>
+                        El mantenimiento predictivo se sirve de técnicas como el machine learning y la monitorización 
+                        de activos para identificar anomalías y defectos en equipos y maquinaria antes de que se 
+                        produzcan modificaciones en su buen funcionamiento o sobrevenga un fallo. Se enmarca en las 
+                        actividades de manutención que se programan con regularidad y minimiza las intervenciones, evita 
+                        las paradas no planificadas y reduce los costes. El objetivo del mantenimiento predictivo es que 
+                        los activos físicos se encuentren en las mejores condiciones.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">¿Cómo se diferencia el mantenimiento predictivo del preventivo?</h3>
+                <div class="faq-answer">
+                    <p>
+                        El mantenimiento predictivo se basa en la monotorización continua de datos y señales para 
+                        anticipar problemas, mientras que el mantenimiento preventivo se realiza en intervalos regulares 
+                        independientemente del estado del equipo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">¿Cuáles son los principales beneficios de implementar el mantenimiento predictivo?</h3>
+                <div class="faq-answer">
+                    <p>
+                        Los beneficios incluyen una reducción significativa de costos de mantenimiento, una mayor eficiencia
+                        en la gestión de activos, una disminución del tiempo de inactividad no planificado y una prolongación
+                        de la vida útil de los equipos.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.addEventListener('click', event => {
+                    const currentActive = document.querySelector('.faq-item.active');
+                    const parent = item.parentNode;
+
+                    if (currentActive && currentActive !== parent) {
+                        currentActive.querySelector('.faq-answer').style.maxHeight = '0';
+                        currentActive.classList.remove('active');
+                        setTimeout(() => {
+                            parent.classList.add('active');
+                            const answer = parent.querySelector('.faq-answer');
+                            answer.style.maxHeight = (answer.scrollHeight+20) + 'px';
+                        }, 500);
+                    } else {
+                        parent.classList.toggle('active');
+                        const answer = parent.querySelector('.faq-answer');
+                        if (parent.classList.contains('active')) {
+                            answer.style.maxHeight = (answer.scrollHeight+20) + 'px';
+                        } else {
+                            answer.style.maxHeight = '0';
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('.navegation a').forEach(link => {
+                if (link.href.split('/').pop() === window.location.pathname.split('/').pop()) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
+    </body>
+</html>

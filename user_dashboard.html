@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASVA - Dashboard Usuario</title>
+    <link rel="stylesheet" href="styles/StyleUserDashboard.css">
+    <script src="https://kit.fontawesome.com/469c12c556.js" crossorigin="CASVA"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard Usuario</h1>
+        <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+    </header>
+
+    <div class="container">
+        <section id="myProducts">
+            <h2>Mis Productos</h2>
+            <div id="productsList">
+                <!-- Lista de productos contratados -->
+            </div>
+        </section>
+
+        <section id="maintenanceDashboard">
+            <h2>Mantenimiento Predictivo</h2>
+            <canvas id="maintenanceChart"></canvas>
+            <div id="alerts">
+                <h3>Alertas</h3>
+                <!-- Alertas serán cargadas aquí -->
+            </div>
+            <div id="reports">
+                <h3>Reportes</h3>
+                <!-- Reportes serán cargados aquí -->
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="user_dashboard.js"></script>
+</body>
+</html>

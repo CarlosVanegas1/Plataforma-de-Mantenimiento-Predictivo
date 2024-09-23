@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --text-light: d1d5db;
+    --max-width: 1180px;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    background-color: black;
+    color: white;
+}
+
+.logo{
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.navegation a{
+    position: relative;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegation a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navegation a:hover::after, .navegation a.active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navegation a.active {
+    font-weight: bold;
+}
+
+.navegation .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.navegation .btn:hover{
+    background: #fff;
+    color: #090f1d;
+}
+
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+    background-color: #f7f7f777;
+}
+
+body {
+    background: #f5f5f5;
+    background-image: url(../Imagenes/Services.jfif);
+    background-size: cover;
+    background-position: center;
+}
+
+.services-header {
+    text-align: center;
+    padding: 20px 20px;
+    /*color: #333;*/
+    color: whitesmoke;
+    margin-top: 100px;
+}
+
+.services-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.services-header p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px 20px;
+    margin: 50px auto 0 auto;
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.service p {
+    font-size: 1em;
+    color: #555;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Para mejorar la apariencia en pantallas móviles */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+        margin: 30px auto;
+    }
+}
